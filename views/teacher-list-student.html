@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Starter | Minton - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- Sweet Alert-->
+    <link href="../assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- App css -->
+    <link href="../assets/css/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="../assets/css/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+    <link href="../assets/css/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css"
+        id="bs-dark-stylesheet" />
+    <link href="../assets/css/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+    <!-- icons -->
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .scrolling-wrapper {
+            overflow-x: auto;
+        }
+
+        /* body {
+            background-color: black;
+            color: #fff;
+            font-family: 'system-ui';
+        } */
+
+        /* h1 {
+            font-weight: 700;
+            font-size: 3.4em;
+        } */
+
+        /* .subtitle {
+            font-size: 1.25em;
+            opacity: 0.65;
+        } */
+
+        .card-block {
+            height: 300px;
+            background-color: #fff;
+            border: none;
+            background-position: center;
+            background-size: cover;
+            transition: all 0.2s ease-in-out !important;
+            border-radius: 24px;
+
+            /* &:hover {
+                transform: translateY(-5px);
+                box-shadow: none;
+                opacity: 0.9;
+            } */
+        }
+
+        .card-1 {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .card-2 {
+            background-color: #0093E9;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        }
+
+        .card-3 {
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        }
+
+        .card-4 {
+            background-color: #FBAB7E;
+            background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+        }
+
+        .card-5 {
+            background-color: #85FFBD;
+            background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+        }
+
+        .card-6 {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+        }
+
+        .card-7 {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+        }
+
+        .card-8 {
+            background-color: #FBDA61;
+            background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+        }
+
+        .card-9 {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .card-10 {
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+        }
+    </style>
+</head>
+
+<body class="loading">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo logo-dark text-center">
+                        <span class="logo-sm">
+                            <img src="../assets/images/logo-sm-dark.png" alt="" height="24">
+                            <!-- <span class="logo-lg-text-light">Minton</span> -->
+                        </span>
+                        <span class="logo-lg">
+                            <img src="../assets/images/logo-dark.png" alt="" height="20">
+                            <!-- <span class="logo-lg-text-light">M</span> -->
+                        </span>
+                    </a>
+
+                    <a href="index.html" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="../assets/images/logo-sm.png" alt="" height="24">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="../assets/images/logo-light.png" alt="" height="20">
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect waves-light">
+                            <i class="fe-menu"></i>
+                        </button>
+                    </li>
+
+
+
+
+
+
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+
+
+            <div class="h-100" data-simplebar>
+
+
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul id="side-menu">
+
+                        <li class="menu-title">學生</li>
+
+                        <li>
+                            <a href="student-list-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-list-course.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程行事曆 </span>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="student-list-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 公告列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-list-notification.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 通知列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-info.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 個人資訊 </span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title">老師</li>
+
+                        <li>
+                            <a href="teacher-edit-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 新增課程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程列表 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-course.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程行事曆 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-edit-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 新增公告</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 公告列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-list-student.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 學生列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-edit-instruction.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程介紹 </span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+
+
+
+
+                    <div class="row" id="studentList">
+
+                    </div>
+
+
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+
+
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Vendor js -->
+    <script src="../assets/js/vendor.min.js"></script>
+
+    <script src="../js/data.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- App js -->
+    <script src="../assets/js/app.min.js"></script>
+
+    <script>
+        $("#studentList").empty();
+
+        studentList.forEach(function (obj, index) {
+            $("#studentList").append(`<div class="col-lg-6">
+                            <div class="card ribbon-box">
+                                <div class="card-body">
+                                    <div class="d-flex align-items-start">
+                                        <div class="me-3">
+                                            <img src="../assets/images/users/${obj.value0}" alt="user-image"
+                                                class="rounded avatar-md">
+                                        </div>
+                                        <div class="flex-1">
+                                            <h5 class="my-1"><a href="javascript:void(0);"
+                                                    class="text-dark">${obj.value1}${obj.status == '停權' ? '(停權)' : ''}</a>
+                                            </h5>
+                                            <p class="text-muted mb-0">
+                                                <i class="mdi mdi-account me-1"></i>${obj.value2}
+                                            </p>
+                                        </div>
+                                        <div class="dropdown">
+                                            <a class="text-body dropdown-toggle" href="#" data-bs-toggle="dropdown"
+                                                aria-haspopup="true" aria-expanded="false">
+                                                <i class="mdi mdi-dots-vertical font-20"></i>
+                                            </a>
+                                            <div class="dropdown-menu dropdown-menu-end" id="${obj.value2}">
+                                                <a class="dropdown-item" href="teacher-edit-student.html?id=${obj.value1}">查看</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <hr>
+                                    ${index == 0 ? '<div class="ribbon ribbon-danger float-end ribbon-shape">有訊息</div>' : ''}
+                                    <div class="text-muted">
+                                        <div class="row">
+                                            <div class="col-sm-4 col-6 text-center">
+                                                <div>
+                                                    <p class="mb-0">剩餘堂數</p>
+                                                    <h5 class="mb-sm-0">${obj.value3}</h5>
+                                                </div>
+                                            </div>
+                                            <div class="col-sm-4 col-6 text-center">
+                                                <div>
+                                                    <p class="mb-0">課程截止日期</p>
+                                                    <h5 class="mb-sm-0">${obj.value4}</h5>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`)
+
+        });
+    </script>
+
+</body>
+
+</html>

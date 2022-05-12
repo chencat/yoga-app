@@ -1,0 +1,613 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Starter | Minton - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- Sweet Alert-->
+    <link href="../assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Plugin css -->
+    <link href="../assets/libs/@fullcalendar/core/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/daygrid/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/bootstrap/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/timegrid/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/list/main.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Plugins css -->
+    <link href="../assets/libs/mohithg-switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- App css -->
+    <link href="../assets/css/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="../assets/css/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+    <link href="../assets/css/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css"
+        id="bs-dark-stylesheet" />
+    <link href="../assets/css/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+    <!-- icons -->
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .scrolling-wrapper {
+            overflow-x: auto;
+        }
+
+        /* body {
+            background-color: black;
+            color: #fff;
+            font-family: 'system-ui';
+        } */
+
+        /* h1 {
+            font-weight: 700;
+            font-size: 3.4em;
+        } */
+
+        /* .subtitle {
+            font-size: 1.25em;
+            opacity: 0.65;
+        } */
+
+        .card-block {
+            height: 300px;
+            background-color: #fff;
+            border: none;
+            background-position: center;
+            background-size: cover;
+            transition: all 0.2s ease-in-out !important;
+            border-radius: 24px;
+
+            /* &:hover {
+                transform: translateY(-5px);
+                box-shadow: none;
+                opacity: 0.9;
+            } */
+        }
+
+        .card-1 {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .card-2 {
+            background-color: #0093E9;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        }
+
+        .card-3 {
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        }
+
+        .card-4 {
+            background-color: #FBAB7E;
+            background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+        }
+
+        .card-5 {
+            background-color: #85FFBD;
+            background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+        }
+
+        .card-6 {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+        }
+
+        .card-7 {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+        }
+
+        .card-8 {
+            background-color: #FBDA61;
+            background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+        }
+
+        .card-9 {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .card-10 {
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+        }
+    </style>
+</head>
+
+<body class="loading">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo logo-dark text-center">
+                        <span class="logo-sm">
+                            <img src="../assets/images/logo-sm-dark.png" alt="" height="24">
+                            <!-- <span class="logo-lg-text-light">Minton</span> -->
+                        </span>
+                        <span class="logo-lg">
+                            <img src="../assets/images/logo-dark.png" alt="" height="20">
+                            <!-- <span class="logo-lg-text-light">M</span> -->
+                        </span>
+                    </a>
+
+                    <a href="index.html" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="../assets/images/logo-sm.png" alt="" height="24">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="../assets/images/logo-light.png" alt="" height="20">
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect waves-light">
+                            <i class="fe-menu"></i>
+                        </button>
+                    </li>
+
+
+
+
+
+
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+
+
+            <div class="h-100" data-simplebar>
+
+
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul id="side-menu">
+
+                        <li class="menu-title">學生</li>
+
+                        <li>
+                            <a href="student-list-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-list-course.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程行事曆 </span>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="student-list-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 公告列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-list-notification.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 通知列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-info.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 個人資訊 </span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title">老師</li>
+
+                        <li>
+                            <a href="teacher-edit-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 新增課程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程列表 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-course.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程行事曆 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-edit-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 新增公告</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 公告列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-list-student.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 學生列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-edit-instruction.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程介紹 </span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+
+
+
+
+                    <div class="row">
+                        <div class="col-12">
+                            <div class="card">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-2">2022/05/05 週四下午9:15</h4>
+                                    <p class="card-title mb-2">療癒 / Restorative 實體課 / 視訊課</p>
+                                    <p class="card-title mb-2">Doris</p>
+                                    <p class="card-title">實體課參加人數：5</p>
+                                    <p class="card-title">實體課登記人數：5</p>
+                                    <p class="card-title">實體課簽到人數：0</p>
+                                    <p class="card-title">實體課不參加人數：0</p>
+                                    <p class="card-title">視訊課參加人數：20</p>
+                                    <p class="card-title">視訊課簽到人數：0</p>
+                                    <button type="submit" class="btn btn-danger mb-4 pause">停課</button>
+
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-4">實體課參加或登記學生</h4>
+                                <button type="submit" class="btn btn-primary mb-4 add-new-student">新增學生</button>
+                                <div class="card-body">
+                                    <div class="scrolling-wrapper row flex-row flex-nowrap pb-4" id="course-offline">
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-4">視訊課課參加學生</h4>
+                                <button type="submit" class="btn btn-primary mb-4 add-new-student">新增學生</button>
+                                <div class="card-body">
+                                    <div class="scrolling-wrapper row flex-row flex-nowrap pb-4" id="course-online">
+
+
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+
+
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+
+
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+
+    </div>
+    <!-- END wrapper -->
+
+    <div class="modal fade" id="add-new-student" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="mySmallModalLabel">新增學生</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-self: center;">
+
+                    <div class="col-12 mb-4">
+                        <select name="country" class="multi-select" multiple="" id="my_multi_select3">
+                        </select>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">離開</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">新增</button>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+    <!-- Vendor js -->
+    <script src="../assets/js/vendor.min.js"></script>
+
+    <script src="../js/data.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Plugins Js -->
+    <script src="../assets/libs/selectize/js/standalone/selectize.min.js"></script>
+    <script src="../assets/libs/mohithg-switchery/switchery.min.js"></script>
+    <script src="../assets/libs/multiselect/js/jquery.multi-select.js"></script>
+    <script src="../assets/libs/jquery.quicksearch/jquery.quicksearch.min.js"></script>
+    <script src="../assets/libs/select2/js/select2.min.js"></script>
+    <script src="../assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="../assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+
+    <!-- plugin js -->
+    <script src="../assets/libs/moment/min/moment.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/core/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/bootstrap/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/daygrid/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/timegrid/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/list/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/interaction/main.min.js"></script>
+
+    <!-- Calendar init -->
+    <!-- <script src="../assets/js/pages/calendar.init.js"></script> -->
+
+    <script>
+        studentList.forEach(function (obj, index) {
+            var buttons = '';
+            if (index == 0) {
+                buttons = `<button type="submit" class="btn btn-warning mt-2 reserve">登記</button>`
+            } else {
+                buttons = `<button type="submit" class="btn btn-success mt-2 checkin">簽到</button>
+                            <button type="submit" class="btn btn-danger mt-2 cancel">取消</button>`
+            }
+            $("#course-offline").append(`<div class="col-12">
+                                            <div class="card card-block">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="me-3">
+                                                        <img src="../assets/images/users/${obj.value0}" alt="user-image"
+                                                            class="rounded avatar-md">
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <h5 class="my-1"><a href="javascript:void(0);"
+                                                                class="text-dark">${obj.value1}</a>
+                                                        </h5>
+                                                        <p class="text-muted mb-0">
+                                                            <i class="mdi mdi-account me-1"></i>${obj.value2}
+                                                        </p>
+                                                    </div>
+                                                    <div class="dropdown">
+                                                        <a class="text-body dropdown-toggle" href="#"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="mdi mdi-dots-vertical font-20"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item"
+                                                                href="teacher-edit-student.html">查看</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="text-muted">
+                                                    <div class="row">
+                                                        <div class="col-sm-4 col-6">
+                                                            <div>
+                                                                <p class="mb-0">剩餘堂數</p>
+                                                                <h5 class="mb-sm-0">${obj.value3}</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 col-6">
+                                                            <div>
+                                                                <p class="mb-0">課程截止日期</p>
+                                                                <h5 class="mb-sm-0">${obj.value4}</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12" id="${obj.value2}">
+                                                    ${buttons}
+                                                </div>
+
+                                            </div>
+                                        </div>`);
+
+            $("#course-online").append(`<div class="col-12">
+                                            <div class="card card-block">
+                                                <div class="d-flex align-items-start">
+                                                    <div class="me-3">
+                                                        <img src="../assets/images/users/${obj.value0}" alt="user-image"
+                                                            class="rounded avatar-md">
+                                                    </div>
+                                                    <div class="flex-1">
+                                                        <h5 class="my-1"><a href="javascript:void(0);"
+                                                                class="text-dark">${obj.value1}</a>
+                                                        </h5>
+                                                        <p class="text-muted mb-0">
+                                                            <i class="mdi mdi-account me-1"></i>${obj.value2}
+                                                        </p>
+                                                    </div>
+                                                    <div class="dropdown">
+                                                        <a class="text-body dropdown-toggle" href="#"
+                                                            data-bs-toggle="dropdown" aria-haspopup="true"
+                                                            aria-expanded="false">
+                                                            <i class="mdi mdi-dots-vertical font-20"></i>
+                                                        </a>
+
+                                                        <div class="dropdown-menu dropdown-menu-end">
+                                                            <a class="dropdown-item"
+                                                                href="teacher-edit-student.html">查看</a>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <hr>
+                                                <div class="text-muted">
+                                                    <div class="row">
+                                                        <div class="col-sm-4 col-6">
+                                                            <div>
+                                                                <p class="mb-0">剩餘堂數</p>
+                                                                <h5 class="mb-sm-0">${obj.value3}</h5>
+                                                            </div>
+                                                        </div>
+                                                        <div class="col-sm-4 col-6">
+                                                            <div>
+                                                                <p class="mb-0">課程截止日期</p>
+                                                                <h5 class="mb-sm-0">${obj.value4}</h5>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-12" id="${obj.value2}">
+                                                    <button type="submit" class="btn btn-success mt-2 checkin">簽到</button>
+                                                    <button type="submit" class="btn btn-danger mt-2 cancel">取消</button>
+                                                </div>
+
+                                            </div>
+                                        </div>`);
+        });
+
+        $(".checkin").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `是否幫助${id}簽到本次課程?`,
+                showCancelButton: true,
+                confirmButtonText: '登記',
+                cancelButtonText: '離開',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+
+        $(".reserve").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `是否接受${id}登記本次課程?`,
+                showCancelButton: true,
+                confirmButtonText: '接受',
+                cancelButtonText: '不接受',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+        $(".cancel").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `是否取消${id}本次課程?`,
+                showCancelButton: true,
+                confirmButtonText: '取消',
+                cancelButtonText: '離開',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+
+        $(".pause").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `是否暫停本次課程?`,
+                showCancelButton: true,
+                confirmButtonText: '停課',
+                cancelButtonText: '離開',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+
+        studentList.forEach(function (obj) {
+            $("#my_multi_select3").append(`<option value="${obj.value1}"${obj.selected == true ? 'selected' : ''}>${obj.value1}/${obj.value2}</option>`);
+        });
+
+        $("#my_multi_select3").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
+
+
+
+        $(".add-new-student").click(function () {
+            $("#add-new-student").modal('show');
+        });
+
+    </script>
+
+
+    <!-- App js -->
+    <script src="../assets/js/app.min.js"></script>
+
+</body>
+
+</html>

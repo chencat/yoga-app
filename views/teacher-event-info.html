@@ -1,0 +1,702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <title>Starter | Minton - Admin & Dashboard Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta content="A fully featured admin theme which can be used to build CRM, CMS, etc." name="description" />
+    <meta content="Coderthemes" name="author" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- App favicon -->
+    <link rel="shortcut icon" href="../assets/images/favicon.ico">
+
+    <!-- Sweet Alert-->
+    <link href="../assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Plugin css -->
+    <link href="../assets/libs/@fullcalendar/core/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/daygrid/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/bootstrap/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/timegrid/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/list/main.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Plugins css -->
+    <link href="../assets/libs/mohithg-switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet"
+        type="text/css" />
+
+    <!-- App css -->
+    <link href="../assets/css/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
+    <link href="../assets/css/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
+
+    <link href="../assets/css/default/bootstrap-dark.min.css" rel="stylesheet" type="text/css"
+        id="bs-dark-stylesheet" />
+    <link href="../assets/css/default/app-dark.min.css" rel="stylesheet" type="text/css" id="app-dark-stylesheet" />
+
+    <!-- icons -->
+    <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
+    <style>
+        .scrolling-wrapper {
+            overflow-x: auto;
+        }
+
+        /* body {
+            background-color: black;
+            color: #fff;
+            font-family: 'system-ui';
+        } */
+
+        /* h1 {
+            font-weight: 700;
+            font-size: 3.4em;
+        } */
+
+        /* .subtitle {
+            font-size: 1.25em;
+            opacity: 0.65;
+        } */
+
+        .card-block {
+            height: 300px;
+            background-color: #fff;
+            border: none;
+            background-position: center;
+            background-size: cover;
+            transition: all 0.2s ease-in-out !important;
+            border-radius: 24px;
+
+            /* &:hover {
+                transform: translateY(-5px);
+                box-shadow: none;
+                opacity: 0.9;
+            } */
+        }
+
+        .card-1 {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .card-2 {
+            background-color: #0093E9;
+            background-image: linear-gradient(160deg, #0093E9 0%, #80D0C7 100%);
+        }
+
+        .card-3 {
+            background-color: #00DBDE;
+            background-image: linear-gradient(90deg, #00DBDE 0%, #FC00FF 100%);
+        }
+
+        .card-4 {
+            background-color: #FBAB7E;
+            background-image: linear-gradient(62deg, #FBAB7E 0%, #F7CE68 100%);
+        }
+
+        .card-5 {
+            background-color: #85FFBD;
+            background-image: linear-gradient(45deg, #85FFBD 0%, #FFFB7D 100%);
+        }
+
+        .card-6 {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+        }
+
+        .card-7 {
+            background-color: #FA8BFF;
+            background-image: linear-gradient(45deg, #FA8BFF 0%, #2BD2FF 52%, #2BFF88 90%);
+        }
+
+        .card-8 {
+            background-color: #FBDA61;
+            background-image: linear-gradient(45deg, #FBDA61 0%, #FF5ACD 100%);
+        }
+
+        .card-9 {
+            background-color: #4158D0;
+            background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+        }
+
+        .card-10 {
+            background-color: #FF3CAC;
+            background-image: linear-gradient(225deg, #FF3CAC 0%, #784BA0 50%, #2B86C5 100%);
+
+        }
+    </style>
+</head>
+
+<body class="loading">
+
+    <!-- Begin page -->
+    <div id="wrapper">
+
+        <!-- Topbar Start -->
+        <div class="navbar-custom">
+            <div class="container-fluid">
+
+                <!-- LOGO -->
+                <div class="logo-box">
+                    <a href="index.html" class="logo logo-dark text-center">
+                        <span class="logo-sm">
+                            <img src="../assets/images/logo-sm-dark.png" alt="" height="24">
+                            <!-- <span class="logo-lg-text-light">Minton</span> -->
+                        </span>
+                        <span class="logo-lg">
+                            <img src="../assets/images/logo-dark.png" alt="" height="20">
+                            <!-- <span class="logo-lg-text-light">M</span> -->
+                        </span>
+                    </a>
+
+                    <a href="index.html" class="logo logo-light text-center">
+                        <span class="logo-sm">
+                            <img src="../assets/images/logo-sm.png" alt="" height="24">
+                        </span>
+                        <span class="logo-lg">
+                            <img src="../assets/images/logo-light.png" alt="" height="20">
+                        </span>
+                    </a>
+                </div>
+
+                <ul class="list-unstyled topnav-menu topnav-menu-left m-0">
+                    <li>
+                        <button class="button-menu-mobile waves-effect waves-light">
+                            <i class="fe-menu"></i>
+                        </button>
+                    </li>
+
+
+
+
+
+
+                </ul>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+        <!-- end Topbar -->
+
+        <!-- ========== Left Sidebar Start ========== -->
+        <div class="left-side-menu">
+
+
+
+            <div class="h-100" data-simplebar>
+
+
+
+                <!--- Sidemenu -->
+                <div id="sidebar-menu">
+
+                    <ul id="side-menu">
+
+                        <li class="menu-title">學生</li>
+
+                        <li>
+                            <a href="student-list-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-list-course.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程行事曆 </span>
+                            </a>
+                        </li>
+
+
+                        <li>
+                            <a href="student-list-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 公告列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-list-notification.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 通知列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="student-info.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 個人資訊 </span>
+                            </a>
+                        </li>
+
+                        <li class="menu-title">老師</li>
+
+                        <li>
+                            <a href="teacher-edit-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 新增課程</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-event.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程列表 </span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-course.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程行事曆 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-edit-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 新增公告</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="teacher-list-announcement.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 公告列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-list-student.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 學生列表 </span>
+                            </a>
+                        </li>
+
+                        <li>
+                            <a href="teacher-edit-instruction.html">
+                                <i class="ri-message-2-line"></i>
+                                <span> 課程介紹 </span>
+                            </a>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <!-- End Sidebar -->
+
+                <div class="clearfix"></div>
+
+            </div>
+            <!-- Sidebar -left -->
+
+        </div>
+        <!-- Left Sidebar End -->
+
+        <!-- ============================================================== -->
+        <!-- Start Page Content here -->
+        <!-- ============================================================== -->
+
+        <div class="content-page">
+            <div class="content">
+
+                <!-- Start Content-->
+                <div class="container-fluid">
+
+
+
+
+
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body">
+                                <h4 class="header-title mb-4">新增課程</h4>
+
+                                <ul class="nav nav-tabs nav-bordered nav-justified">
+                                    <li class="nav-item">
+                                        <a href="#home-b2" data-bs-toggle="tab" aria-expanded="true"
+                                            class="nav-link active">
+
+                                            <span class="d-inline-block d-sm-none">固定課程</span>
+                                            <span class="d-none d-sm-inline-block">固定課程</span>
+                                        </a>
+                                    </li>
+
+                                    <li class="nav-item">
+                                        <a href="#settings-b2" data-bs-toggle="tab" aria-expanded="false"
+                                            class="nav-link">
+                                            <!-- <span class="d-inline-block d-sm-none"><i class="mdi mdi-cog"></i></span> -->
+                                            <span class="d-inline-block d-sm-none">工作坊</span>
+                                            <span class="d-none d-sm-inline-block">工作坊</span>
+                                        </a>
+                                    </li>
+                                </ul>
+                                <div class="tab-content">
+
+                                    <div class="tab-pane active" id="home-b2">
+
+                                        <div class="card">
+                                            <div class="card-body">
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">選擇類型</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" id="selectize-tags0" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">選擇課程</label>
+                                                    <div class="col-md-10">
+                                                        <select id="selectize-tags8">
+                                                            <option data-display="Select">選擇課程
+                                                            </option>
+                                                            <option value="1">基礎 1/Basic 1
+                                                            </option>
+                                                            <option value="2">療癒/Restorative
+                                                            </option>
+                                                            <option value="3">基礎 2/Basic 2
+                                                            </option>
+                                                            <option value="4">睡眠修護
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">選擇老師</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" id="selectize-tags1" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">上課地點</label>
+                                                    <div class="col-md-10">
+                                                        <select id="selectize-tags2">
+                                                            <option data-display="Select">選擇上課地點
+                                                            </option>
+                                                            <option value="1">璽璽藝術空間D Art Studio
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">上課地址</label>
+                                                    <div class="col-md-10">
+
+                                                        <select id="selectize-tags3">
+                                                            <option data-display="Select">選擇上課地址
+                                                            </option>
+                                                            <option value="1">台中市公益路155巷92號</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">上課時段</label>
+                                                    <div class="col-md-10">
+
+                                                        <select id="selectize-tags4">
+                                                            <option data-display="Select">選擇上課時段
+                                                            </option>
+                                                            <option value="1">週一</option>
+                                                            <option value="2">週二</option>
+                                                            <option value="3">週三</option>
+                                                            <option value="4">週四</option>
+                                                            <option value="5">週五</option>
+                                                            <option value="6">週六</option>
+                                                            <option value="7">週日</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">開始時間</label>
+                                                    <div class="col-md-10">
+                                                        <input class="form-control" type="time" id="example-time"
+                                                            name="time">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">結束時間</label>
+                                                    <div class="col-md-10">
+                                                        <input class="form-control" type="time" id="example-time"
+                                                            name="time">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-date">開始日期</label>
+                                                    <div class="col-md-10">
+                                                        <input class="form-control" type="date" name="date"
+                                                            id="example-date">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-date">結束日期</label>
+                                                    <div class="col-md-10">
+                                                        <input class="form-control" type="date" name="date"
+                                                            id="example-date">
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-textarea">實體課介紹</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" id="example-textarea"
+                                                            rows="5"></textarea>
+                                                    </div>
+                                                </div>
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-textarea">視訊課介紹</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" id="example-textarea"
+                                                            rows="5"></textarea>
+                                                    </div>
+                                                </div>
+                                                <h6 style="color: red;">* 固定課程不用選開始日期與結束日期</h6>
+                                                <button type="submit" class="btn btn-primary">新增</button>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="tab-pane" id="settings-b2">
+                                        <div class="card">
+                                            <div class="card-body">
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label" for="simpleinput">名稱</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" id="simpleinput" class="form-control"
+                                                            value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">選擇老師</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" id="selectize-tags5" value="">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">上課地點</label>
+                                                    <div class="col-md-10">
+                                                        <select id="selectize-tags6">
+                                                            <option data-display="Select">選擇上課地點
+                                                            </option>
+                                                            <option value="1">璽璽藝術空間D Art Studio
+                                                            </option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-time">上課地址</label>
+                                                    <div class="col-md-10">
+
+                                                        <select id="selectize-tags7">
+                                                            <option data-display="Select">選擇上課地址
+                                                            </option>
+                                                            <option value="1">台中市公益路155巷92號</option>
+                                                        </select>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <div id="calendar"></div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-textarea">課程介紹</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" id="example-textarea"
+                                                            rows="5"></textarea>
+                                                    </div>
+                                                </div>
+                                                <h6 style="color: red;">*</h6>
+                                                <button type="submit" class="btn btn-primary">新增</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
+
+                </div> <!-- container -->
+
+            </div> <!-- content -->
+
+
+
+        </div>
+
+        <!-- ============================================================== -->
+        <!-- End Page content -->
+        <!-- ============================================================== -->
+
+
+    </div>
+    <!-- END wrapper -->
+
+    <!-- Vendor js -->
+    <script src="../assets/js/vendor.min.js"></script>
+
+    <script src="../js/data.js"></script>
+
+    <!-- Sweet Alerts js -->
+    <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Plugins Js -->
+    <script src="../assets/libs/selectize/js/standalone/selectize.min.js"></script>
+    <script src="../assets/libs/mohithg-switchery/switchery.min.js"></script>
+    <script src="../assets/libs/multiselect/js/jquery.multi-select.js"></script>
+    <script src="../assets/libs/jquery.quicksearch/jquery.quicksearch.min.js"></script>
+    <script src="../assets/libs/select2/js/select2.min.js"></script>
+    <script src="../assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="../assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+
+    <!-- plugin js -->
+    <script src="../assets/libs/moment/min/moment.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/core/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/bootstrap/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/daygrid/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/timegrid/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/list/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/interaction/main.min.js"></script>
+
+    <!-- Calendar init -->
+    <!-- <script src="../assets/js/pages/calendar.init.js"></script> -->
+
+    <script>
+
+        // var tags1 = $("#selectize-tags1").selectize({
+        //     persist: !1,
+        //     createOnBlur: !0,
+        //     create: !0,
+        //     options: [
+        //         { id: 1, title: 'value1' },
+        //         { id: 2, title: 'value2' },
+        //         { id: 3, title: 'value3' }
+        //     ],
+        // })
+        var $select = $('#selectize-tags0').selectize({
+            valueField: 'id',
+            labelField: 'title',
+            searchField: 'title',
+            options: [
+                { id: 1, title: '實體課' },
+                { id: 2, title: '視訊課' },
+            ],
+            create: false,
+        });
+        var $select = $('#selectize-tags1').selectize({
+            valueField: 'id',
+            labelField: 'title',
+            searchField: 'title',
+            options: [
+                { id: 1, title: 'Doris' },
+                { id: 2, title: 'Bella' },
+            ],
+            create: true,
+        });
+        var $select = $('#selectize-tags5').selectize({
+            valueField: 'id',
+            labelField: 'title',
+            searchField: 'title',
+            options: [
+                { id: 1, title: 'Doris' },
+                { id: 2, title: 'Bella' },
+            ],
+            create: true,
+        });
+
+        $("#selectize-tags2").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        $("#selectize-tags3").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        $("#selectize-tags4").selectize({
+            persist: !1, createOnBlur: !0, create: 0
+        })
+        $("#selectize-tags6").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        $("#selectize-tags7").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        $("#selectize-tags8").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        // var $select = $('#selectize-tags8').selectize({
+        //     valueField: 'id',
+        //     labelField: 'title',
+        //     searchField: 'title',
+        //     options: [
+        //         { id: 1, title: '基礎1/Basic1' },
+        //         { id: 2, title: '基礎2/Basic2' },
+        //         { id: 3, title: '睡眠修護/Basic3' },
+        //         { id: 4, title: '療癒/Restorative' },
+        //     ],
+        //     create: true,
+        // });
+    </script>
+    <script>
+        var eventList = [
+            {
+                id: 1,
+                title: "事件1",
+                start: "2022-05-01",
+                end: "2022-05-06",
+            },
+            {
+                id: 2,
+                title: "事件2",
+                start: "2022-05-01",
+                end: "2022-05-02",
+            },
+        ];
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            // initialView: 'dayGridMonth',
+            plugins: ["bootstrap", "interaction", "dayGrid", "timeGrid", "list"],
+            timeZone: 'Asia/Taipei',
+            height: 300,
+            events: eventList
+        });
+        calendar.on('dateClick', function (info) {
+            //取得點擊日期
+            let date = info.dateStr;
+            console.log(info)
+            Swal.fire('選擇時段');
+        });
+        calendar.render();
+    </script>
+
+
+    <!-- App js -->
+    <script src="../assets/js/app.min.js"></script>
+
+</body>
+
+</html>
