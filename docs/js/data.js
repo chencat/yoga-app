@@ -84,3 +84,7 @@ let studentInfoCourseList = [
     , { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '璽璽藝術空間D Art Studio', value5: '參加', value6: ['簽到', '取消'] }
     , { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '璽璽藝術空間D Art Studio', value5: '課程已結束，尚未簽到', value6: ['簽到'] }
     , { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '璽璽藝術空間D Art Studio', value5: '提出登記', value6: ['取消'] }];
+let courseHistoryList = [
+    { status: '已結束', value1: '2022/03/03 週二下午7:00(已結束)', value2: '療癒 / Restorative 實體課 / 視訊課', value3: 'Doris', value8: 5, value9: 5, value10: 0, value11: 0, value12: 30, value13: 0, value14: [] }
+    , { value1: '2022/04/03 週二下午7:00', value2: '療癒 / Restorative 實體課 / 視訊課', value3: 'Doris', value8: 5, value9: 5, value10: 0, value11: 0, value12: 30, value13: 0, value14: [] }
+    , { status: '停課', value1: '2022/05/03 週二下午7:00(停課)', value2: '療癒 / Restorative 實體課 / 視訊課', value3: 'Doris', value8: 5, value9: 5, value10: 0, value11: 0, value12: 30, value13: 0, value14: [] }];

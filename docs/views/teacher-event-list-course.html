@@ -291,13 +291,10 @@
 
 
 
-
-
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-body" id="eventList">
-                                <h4 class="header-title mb-4">課程列表</h4>
-
+                            <div class="card-body" id="courseList">
+                                <h4 class="header-title mb-4">週二下午7:00 療癒 / Restorative 實體課 / 視訊課 Doris</h4>
 
                             </div>
                         </div> <!-- end card -->
@@ -333,8 +330,42 @@
 
     <script>
 
-        eventList.forEach(function (obj) {
-            $("#eventList").append(`<div class="card">
+
+        courseHistoryList.forEach(function (obj) {
+            // 工作坊、實體課、視訊課、停課
+            var content = '';
+
+            if (obj.value4 != undefined) {
+                content += `<h5 class="card-title mb-0">參加人數：${obj.value4}</h5>`;
+            }
+            if (obj.value5 != undefined) {
+                content += `<h5 class="card-title mb-0">登記人數：${obj.value5}</h5>`;
+            }
+            if (obj.value6 != undefined) {
+                content += `<h5 class="card-title mb-0">簽到人數：${obj.value6}</h5>`;
+            }
+            if (obj.value7 != undefined) {
+                content += `<h5 class="card-title mb-0">不參加人數：${obj.value7}</h5>`;
+            }
+            if (obj.value8 != undefined) {
+                content += `<h5 class="card-title mb-0">實體課參加人數：${obj.value8}</h5>`;
+            }
+            if (obj.value9 != undefined) {
+                content += `<h5 class="card-title mb-0">實體課登記人數：${obj.value9}</h5>`;
+            }
+            if (obj.value10 != undefined) {
+                content += `<h5 class="card-title mb-0">實體課簽到人數：${obj.value10}</h5>`;
+            }
+            if (obj.value11 != undefined) {
+                content += `<h5 class="card-title mb-0">實體課不參加人數：${obj.value11}</h5>`;
+            }
+            if (obj.value12 != undefined) {
+                content += `<h5 class="card-title mb-0">視訊課參加人數：${obj.value12}</h5>`;
+            }
+            if (obj.value13 != undefined) {
+                content += `<h5 class="card-title mb-0">視訊課簽到人數：${obj.value13}</h5>`;
+            }
+            $("#courseList").append(`<div class="card">
                                     <div class="card-body">
                                         <div class="dropdown float-end">
                                             <a href="#" class="dropdown-toggle arrow-none card-drop"
@@ -342,33 +373,21 @@
                                                 <i class="mdi mdi-dots-vertical"></i>
                                             </a>
                                             <div class="dropdown-menu dropdown-menu-end" id="${obj.value1}">
-                                                <a href="teacher-edit-event.html?id=${obj.value1}" class="dropdown-item">編輯</a>
-                                                <a href="teacher-event-list-course.html?id=${obj.value1}" class="dropdown-item">歷史紀錄</a>
-                                                ${obj.pause == true ? '<a class="dropdown-item pause">暫停</a>' : (obj.finish == false ? '<a class="dropdown-item repause">恢復</a>' : '')}
+                                                <a class="dropdown-item next">查看</a>
+                                                ${obj.status == undefined || obj.status == null ? '<a class="dropdown-item stop">停課</a>' : ''}
                                             </div>
                                         </div>
-                                        <h4 class="header-title mb-">${obj.value1}</h4>
-                                        <h5 class="card-title mb-2">${obj.value2}</h5>
-                                        <h5 class="card-title mb-0">${obj.value3}</h5>
-                                    </div> 
+                            
+                                        <h4 class="header-title mb-2" style="color:${obj.status == '停課' ? 'red' : 'black'};">${obj.status || ''}</h4>
+                                        ${content}
+                                    </div>
                                 </div>`)
         });
 
-        $(".pause").click(function () {
+        $(".stop").click(function () {
             let id = $(this).parent().attr("id");
             Swal.fire({
-                title: `${id} 是否暫停?`,
-                showCancelButton: true,
-                confirmButtonText: '確定',
-                cancelButtonText: '取消',
-            }).then((result) => {
-                /* Read more about isConfirmed, isDenied below */
-            })
-        });
-        $(".repause").click(function () {
-            let id = $(this).parent().attr("id");
-            Swal.fire({
-                title: `${id} 是否恢復?`,
+                title: `${id} 是否停課?`,
                 showCancelButton: true,
                 confirmButtonText: '確定',
                 cancelButtonText: '取消',
@@ -377,6 +396,10 @@
             })
         });
 
+        $(".next").click(function () {
+            let id = $(this).parent().attr("id");
+            location.href = `teacher-edit-course.html?id=${id}`
+        });
 
     </script>
 
