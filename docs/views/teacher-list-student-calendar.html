@@ -14,6 +14,21 @@
     <!-- Sweet Alert-->
     <link href="../assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 
+    <!-- Plugin css -->
+    <link href="../assets/libs/@fullcalendar/core/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/daygrid/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/bootstrap/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/timegrid/main.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/@fullcalendar/list/main.min.css" rel="stylesheet" type="text/css" />
+
+    <!-- Plugins css -->
+    <link href="../assets/libs/mohithg-switchery/switchery.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/multiselect/css/multi-select.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/select2/css/select2.min.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/selectize/css/selectize.bootstrap3.css" rel="stylesheet" type="text/css" />
+    <link href="../assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.css" rel="stylesheet"
+        type="text/css" />
+
     <!-- App css -->
     <link href="../assets/css/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
     <link href="../assets/css/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
@@ -294,144 +309,48 @@
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-
-
-
-
-
-
                     <div class="col-12">
                         <div class="card">
                             <div class="card-body">
-                                <h4 class="header-title mb-4">公告列表</h4>
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">編輯</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">停止</a>
-                                            </div>
-                                        </div>
-                                        <h4 class="header-title mb-2">視訊須知</h4>
-                                        <h5 class="card-title mb-2">公告日期：2022/04/01</h5>
-                                        <!-- <img src="../src/LINE_ALBUM_220501.jpg"> -->
-                                        <div class="card-body">
-                                            <div class="scrolling-wrapper row flex-row flex-nowrap pb-4">
+                                <h4 class="header-title mb-4">設定學生截止日期</h4>
 
-                                                <div class="col-12">
-                                                    <div class="card card-block card-1">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_0.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="card card-block card-2">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_1.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="card card-block card-3">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_2.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="card card-block card-4">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_3.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="card card-block card-5">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_4.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="card card-block card-6">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_5.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="card card-block card-7">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_6.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="card card-block card-8">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_7.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                                <div class="col-12">
-                                                    <div class="card card-block card-9">
-                                                        <img class="card-img-top img-fluid"
-                                                            src="../src/LINE_ALBUM_220501_8.jpg" alt="Card image cap" />
-                                                    </div>
-                                                </div>
-                                            </div>
+                                <div class="mb-2 row">
+                                    <div id="calendar"></div>
+                                </div>
 
-                                        </div>
+                                <div class="mb-2 row">
 
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
+                                    <button type="submit" class="btn btn-primary mt-2">回覆預設</button>
+                                    <button type="submit" class="btn btn-success mt-2">儲存</button>
 
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">編輯</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">停止</a>
-                                            </div>
-                                        </div>
-                                        <h4 class="header-title mb-2">璽璽藝術空間 春夏課表 Yoga Class</h4>
-                                        <h5 class="card-title mb-2">公告日期：2022/04/01</h5>
-                                        <!-- <img src="../src/LINE_ALBUM_220501.jpg"> -->
-                                        <div style="text-align: center;">
-                                            <img class="card-img-top img-fluid" src="../src/LINE_ALBUM_220501.jpg"
-                                                alt="Card image cap" />
-                                        </div>
+                                </div>
 
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
-                                <div class="card">
-                                    <div class="card-body">
-                                        <div class="dropdown float-end">
-                                            <a href="#" class="dropdown-toggle arrow-none card-drop"
-                                                data-bs-toggle="dropdown" aria-expanded="false">
-                                                <i class="mdi mdi-dots-vertical"></i>
-                                            </a>
-                                            <div class="dropdown-menu dropdown-menu-end">
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">編輯</a>
-                                                <!-- item-->
-                                                <a href="javascript:void(0);" class="dropdown-item">停止</a>
-                                            </div>
-                                        </div>
-                                        <h4 class="header-title mb-2">停課通知</h4>
-                                        <h5 class="card-title mb-2">公告日期：2022/04/01</h5>
-                                        <h5 class="card-title mb-2">♦️本週二4/19-五4/23
-                                            Doris停課休息，無任何視訊及實體課程喔
+                                <div class="mb-2 row">
+                                    <label class="col-md-2 col-form-label" for="simpleinput">延長時間</label>
+                                    <div class="col-md-5">
+                                        <input type="text" id="simpleinput" class="form-control" value="">
+                                    </div>
+                                    <div class="col-md-5 mt-2">
+                                        <select class="form-control">
+                                            <option value="1">天
+                                            </option>
+                                            <option value="2">週
+                                            </option>
+                                            <option value="3">月
+                                            </option>
+                                        </select>
+                                    </div>
+                                </div>
 
-                                            下週見✨✨</h5>
+                                <div class="mb-2 row">
 
-                                    </div> <!-- end card-body-->
-                                </div> <!-- end card-->
+                                    <select name="country" class="multi-select" multiple="" id="my_multi_select3">
+
+                                    </select>
+                                    <button type="submit" class="btn btn-primary mt-2">回覆預設</button>
+                                    <button type="submit" class="btn btn-success mt-2">儲存</button>
+
+                                </div>
 
                             </div>
                         </div> <!-- end card -->
@@ -461,6 +380,147 @@
 
     <!-- Sweet Alerts js -->
     <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
+
+    <!-- Plugins Js -->
+    <script src="../assets/libs/selectize/js/standalone/selectize.min.js"></script>
+    <script src="../assets/libs/mohithg-switchery/switchery.min.js"></script>
+    <script src="../assets/libs/multiselect/js/jquery.multi-select.js"></script>
+    <script src="../assets/libs/jquery.quicksearch/jquery.quicksearch.min.js"></script>
+    <script src="../assets/libs/select2/js/select2.min.js"></script>
+    <script src="../assets/libs/bootstrap-touchspin/jquery.bootstrap-touchspin.min.js"></script>
+    <script src="../assets/libs/bootstrap-maxlength/bootstrap-maxlength.min.js"></script>
+
+    <!-- plugin js -->
+    <script src="../assets/libs/moment/min/moment.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/core/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/bootstrap/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/daygrid/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/timegrid/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/list/main.min.js"></script>
+    <script src="../assets/libs/@fullcalendar/interaction/main.min.js"></script>
+
+    <!-- Calendar init -->
+    <!-- <script src="../assets/js/pages/calendar.init.js"></script> -->
+
+    <script>
+
+        // var tags1 = $("#selectize-tags1").selectize({
+        //     persist: !1,
+        //     createOnBlur: !0,
+        //     create: !0,
+        //     options: [
+        //         { id: 1, title: 'value1' },
+        //         { id: 2, title: 'value2' },
+        //         { id: 3, title: 'value3' }
+        //     ],
+        // })
+        var $select = $('#selectize-tags0').selectize({
+            valueField: 'id',
+            labelField: 'title',
+            searchField: 'title',
+            options: [
+                { id: 1, title: '實體課' },
+                { id: 2, title: '視訊課' },
+            ],
+            create: false,
+        });
+        var $select = $('#selectize-tags1').selectize({
+            valueField: 'id',
+            labelField: 'title',
+            searchField: 'title',
+            options: [
+                { id: 1, title: 'Doris' },
+                { id: 2, title: 'Bella' },
+            ],
+            create: true,
+        });
+        var $select = $('#selectize-tags5').selectize({
+            valueField: 'id',
+            labelField: 'title',
+            searchField: 'title',
+            options: [
+                { id: 1, title: 'Doris' },
+                { id: 2, title: 'Bella' },
+            ],
+            create: true,
+        });
+
+        $("#selectize-tags2").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        $("#selectize-tags3").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        $("#selectize-tags4").selectize({
+            persist: !1, createOnBlur: !0, create: 0
+        })
+        $("#selectize-tags6").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        $("#selectize-tags7").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        $("#selectize-tags8").selectize({
+            persist: !1, createOnBlur: !0, create: !0
+        })
+        // var $select = $('#selectize-tags8').selectize({
+        //     valueField: 'id',
+        //     labelField: 'title',
+        //     searchField: 'title',
+        //     options: [
+        //         { id: 1, title: '基礎1/Basic1' },
+        //         { id: 2, title: '基礎2/Basic2' },
+        //         { id: 3, title: '睡眠修護/Basic3' },
+        //         { id: 4, title: '療癒/Restorative' },
+        //     ],
+        //     create: true,
+        // });
+    </script>
+    <script>
+        var studentCalendarList = [
+            {
+                id: 1,
+                title: "3",
+                start: "2022-05-01",
+                end: "2022-05-01",
+            },
+            {
+                id: 2,
+                title: "2",
+                start: "2022-05-02",
+                end: "2022-05-02",
+            },
+        ];
+        var calendarEl = document.getElementById('calendar');
+        var calendar = new FullCalendar.Calendar(calendarEl, {
+            // initialView: 'dayGridMonth',
+            plugins: ["bootstrap", "interaction", "dayGrid", "timeGrid", "list"],
+            timeZone: 'Asia/Taipei',
+            height: 600,
+            events: studentCalendarList
+        });
+        calendar.on('dateClick', function (info) {
+            //取得點擊日期
+            let date = info.dateStr;
+            console.log(info)
+            Swal.fire('選擇學生');
+        });
+        calendar.render();
+
+
+    </script>
+
+    <script>
+
+        studentList.forEach(function (obj) {
+            $("#my_multi_select3").append(`<option value="${obj.value1}">${obj.value1}/${obj.value2}</option>`);
+        });
+
+        $("#my_multi_select3").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
+
+
+    </script>
+
 
     <!-- App js -->
     <script src="../assets/js/app.min.js"></script>
