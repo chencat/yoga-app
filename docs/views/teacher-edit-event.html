@@ -755,7 +755,7 @@
 
         $("#my_multi_select3").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
 
-
+        console.log('20220601')
     </script>
 
 
