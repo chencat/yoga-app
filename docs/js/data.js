@@ -50,11 +50,12 @@ let studentEventList = [
     , { status: '停課', value1: '2022/05/07 週六下午7:30(停課)', value2: '睡眠修護 視訊課', value3: 'Doris', value14: [] }
     , { status: '停課', value1: '2022/05/08 週日下午7:30(停課)', value2: '基礎1 / Basic 1 實體課', value3: 'Doris', value14: [] }];
 let studentEventCourseList = [
-    , { value1: '2022/05/02 週一下午8:00', value2: '基礎1 / Basic 1 實體課', value3: 'Bella', value4: 5, value5: 5, value6: 0, value7: 2, value14: ['參加', '不參加'], attend: false, reserve: false }
-    , { value1: '2022/05/03 週二下午7:00', value2: '療癒 / Restorative 視訊課', value3: 'Doris', value8: 5, value9: 5, value10: 0, value11: 0, value12: 30, value13: 0, value14: ['參加'], attend: false, reserve: false }
+    , { value1: '2022/05/02 週一下午8:00', value2: '基礎1 / Basic 1 實體課', value3: 'Bella', value4: 5, value5: 5, value6: 0, value7: 2, value14: ['簽到', '取消'], attend: true, reserve: false }
+    // , { value1: '2022/05/03 週二下午7:00', value2: '療癒 / Restorative 視訊課', value3: 'Doris', value8: 5, value9: 5, value10: 0, value11: 0, value12: 30, value13: 0, value14: ['參加'], attend: false, reserve: false }
     , { value1: '2022/05/04 週三下午7:00', value2: '療癒 / Restorative 實體課', value3: 'Doris', value4: 5, value5: 5, value6: 0, value7: 0, value14: ['取消'], attend: false, reserve: true }
     , { value1: '2022/05/05 週四下午9:15', value2: '療癒 / Restorative 視訊課', value3: 'Doris', value8: 5, value9: 5, value10: 0, value11: 0, value12: 20, value13: 0, value14: ['簽到', '取消'], attend: true, reserve: false }
-    , { value1: '2022/05/07 週六上午10:00', value2: '基礎1 / Basic 1 實體課', value3: 'Bella', value4: 7, value5: 0, value6: 7, value7: 1, value14: ['登記'], attend: false, reserve: false }];
+    // , { value1: '2022/05/07 週六上午10:00', value2: '基礎1 / Basic 1 實體課', value3: 'Bella', value4: 7, value5: 0, value6: 7, value7: 1, value14: ['登記'], attend: false, reserve: false }
+];
 let studentList = [
     { value0: 'avatar-1.jpg', value1: '愛達', value2: 'Ada', value3: '10', value4: '2021/12/31', status: '', selected: true }
     , { value0: 'avatar-2.jpg', value1: '珍妮', value2: '大Jeanie', value3: '20', value4: '2021/12/31', status: '', selected: true }
