@@ -57,11 +57,11 @@ let studentEventCourseList = [
     // , { value1: '2022/05/07 週六上午10:00', value2: '基礎1 / Basic 1 實體課', value3: 'Bella', value4: 7, value5: 0, value6: 7, value7: 1, value14: ['登記'], attend: false, reserve: false }
 ];
 let studentList = [
-    { value0: 'avatar-1.jpg', value1: '愛達', value2: 'Ada', value3: '10', value4: '2021/12/31', status: '', selected: true }
-    , { value0: 'avatar-2.jpg', value1: '珍妮', value2: '大Jeanie', value3: '20', value4: '2021/12/31', status: '', selected: true }
-    , { value0: 'avatar-3.jpg', value1: '珍妮', value2: '小Jeanie', value3: '5', value4: '2021/12/31', status: '', selected: false }
-    , { value0: 'avatar-4.jpg', value1: '凱倫', value2: 'Karen', value3: '0', value4: '2021/12/31', status: '停權', selected: false }
-    , { value0: 'avatar-5.jpg', value1: 'chencatmail', value2: '丁丁', value3: '10', value4: '2022/12/31', status: '', selected: true }];
+    { date: '2022/06/30', value0: 'avatar-1.jpg', value1: '愛達', value2: 'Ada', value3: '10', value4: '2021/12/31', status: '', selected: true }
+    , { date: '2022/03/30', value0: 'avatar-2.jpg', value1: '珍妮', value2: '大Jeanie', value3: '20', value4: '2021/12/31', status: '', selected: true }
+    , { date: '2022/06/21', value0: 'avatar-3.jpg', value1: '珍妮', value2: '小Jeanie', value3: '5', value4: '2021/12/31', status: '', selected: false }
+    , { date: '2022/06/11', value0: 'avatar-4.jpg', value1: '凱倫', value2: 'Karen', value3: '0', value4: '2021/12/31', status: '停權', selected: false }
+    , { date: '2022/04/20', value0: 'avatar-5.jpg', value1: 'chencatmail', value2: '丁丁', value3: '10', value4: '2022/12/31', status: '', selected: true }];
 let teacherList = [{ id: 1, name: 'Doris' }, { id: 2, name: 'Bella' }];
 let locationList = [{ id: 1, value1: '璽璽藝術空間D Art Studio', value2: '台中市公益路155巷92號' }];
 let announcementList = [

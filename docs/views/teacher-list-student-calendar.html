@@ -373,6 +373,31 @@
     </div>
     <!-- END wrapper -->
 
+    <div class="modal fade" id="add-new-student" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="mySmallModalLabel">選擇學生</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-self: center;">
+
+                    <div class="col-12 mb-4">
+                        <select name="country" class="multi-select" multiple="" id="my_multi_select1">
+                        </select>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">離開</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">新增</button>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
     <!-- Vendor js -->
     <script src="../assets/js/vendor.min.js"></script>
 
@@ -481,14 +506,14 @@
             {
                 id: 1,
                 title: "3",
-                start: "2022-05-01",
-                end: "2022-05-01",
+                start: "2022-06-01",
+                end: "2022-06-01",
             },
             {
                 id: 2,
                 title: "2",
-                start: "2022-05-02",
-                end: "2022-05-02",
+                start: "2022-06-02",
+                end: "2022-06-02",
             },
         ];
         var calendarEl = document.getElementById('calendar');
@@ -503,7 +528,16 @@
             //取得點擊日期
             let date = info.dateStr;
             console.log(info)
-            Swal.fire('選擇學生');
+            // Swal.fire('選擇學生');
+            $("#add-new-student").modal('show');
+        });
+
+        calendar.on('eventClick', function (info) {
+            //取得點擊日期
+            let date = info.dateStr;
+
+            $("#add-new-student").modal('show');
+
         });
         calendar.render();
 
@@ -513,7 +547,15 @@
     <script>
 
         studentList.forEach(function (obj) {
-            $("#my_multi_select3").append(`<option value="${obj.value1}">${obj.value1}/${obj.value2}</option>`);
+            $("#my_multi_select1").append(`<option value="${obj.value1}">${obj.value1}/${obj.value2}</option>`);
+        });
+
+        $("#my_multi_select1").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
+
+
+
+        studentList.forEach(function (obj) {
+            $("#my_multi_select3").append(`<option value="${obj.value1}">${obj.value1}/${obj.value2}(${obj.date})</option>`);
         });
 
         $("#my_multi_select3").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })

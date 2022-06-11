@@ -593,6 +593,47 @@
     </div>
     <!-- END wrapper -->
 
+    <div class="modal fade" id="add-new-date" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="mySmallModalLabel">選擇時段</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body" style="align-self: center;">
+
+                    <div class="mb-2 row">
+                        <label class="col-md-2 col-form-label" for="example-date">開始日期與時間</label>
+                        <div class="col-md-5 mb-2">
+                            <input class="form-control" type="date" name="date" id="example-date">
+                        </div>
+                        <div class="col-md-5">
+                            <input class="form-control" type="time" id="example-time" name="time">
+                        </div>
+                    </div>
+
+                    <div class="mb-2 row">
+                        <label class="col-md-2 col-form-label" for="example-date">結束日期與時間</label>
+                        <div class="col-md-5 mb-2">
+                            <input class="form-control" type="date" name="date" id="example-date">
+                        </div>
+                        <div class="col-md-5">
+                            <input class="form-control" type="time" id="example-time" name="time">
+                        </div>
+                    </div>
+
+
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-light" data-bs-dismiss="modal">離開</button>
+                        <button type="button" class="btn btn-primary" data-bs-dismiss="modal">新增</button>
+                    </div>
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
+
+
     <!-- Vendor js -->
     <script src="../assets/js/vendor.min.js"></script>
 
@@ -695,7 +736,6 @@
             persist: !1, createOnBlur: !0, create: !0
         })
 
-        hideKeyboard($("#selectize-tags8"));
         // var $select = $('#selectize-tags8').selectize({
         //     valueField: 'id',
         //     labelField: 'title',
@@ -710,33 +750,34 @@
         // });
     </script>
     <script>
-        // var eventList = [
-        //     {
-        //         id: 1,
-        //         title: "事件1",
-        //         start: "2022-05-01",
-        //         end: "2022-05-06",
-        //     },
-        //     {
-        //         id: 2,
-        //         title: "事件2",
-        //         start: "2022-05-01",
-        //         end: "2022-05-02",
-        //     },
-        // ];
+        var _eventList = [
+            {
+                id: 1,
+                title: "13:00~17:00",
+                start: "2022-05-30",
+                end: "2022-06-03",
+            },
+            {
+                id: 2,
+                title: "13:00~17:00",
+                start: "2022-06-06",
+                end: "2022-06-10",
+            },
+        ];
         var calendarEl = document.getElementById('calendar');
         var calendar = new FullCalendar.Calendar(calendarEl, {
             // initialView: 'dayGridMonth',
             plugins: ["bootstrap", "interaction", "dayGrid", "timeGrid", "list"],
             timeZone: 'Asia/Taipei',
             height: 300,
-            events: eventList
+            events: _eventList
         });
         calendar.on('dateClick', function (info) {
             //取得點擊日期
             let date = info.dateStr;
             console.log(info)
-            Swal.fire('選擇時段');
+            // Swal.fire('選擇時段');
+            $("#add-new-date").modal('show');
         });
         calendar.render();
 
@@ -755,7 +796,7 @@
 
         $("#my_multi_select3").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
 
-        console.log('20220601')
+
     </script>
 
 
