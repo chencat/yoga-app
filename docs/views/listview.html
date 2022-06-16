@@ -298,16 +298,20 @@
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-
-
-
-
-
-
                     <div class="col-12">
                         <div class="card">
-                            <div class="card-body" id="eventList">
-                                <h4 class="header-title mb-4">課程列表</h4>
+                            <div class="card-body">
+                                <div class="mb-2">
+                                    <div class="row row-cols-lg-auto g-2 align-items-center">
+                                        <div class="col-12">
+                                            <div>
+                                                <button id="demo-btn-addrow" class="btn btn-success"><i
+                                                        class="mdi mdi-plus-circle me-2"></i> 新增</button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
 
 
                             </div>
@@ -330,6 +334,25 @@
 
     </div>
     <!-- END wrapper -->
+
+    <div class="modal fade" id="bs-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel"
+        aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="mySmallModalLabel">課程列表</h4>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+
+                    <div class="mb-2 row" id="eventList">
+
+                    </div>
+
+                </div>
+            </div><!-- /.modal-content -->
+        </div><!-- /.modal-dialog -->
+    </div><!-- /.modal -->
 
     <!-- Vendor js -->
     <script src="../assets/js/vendor.min.js"></script>
@@ -386,6 +409,13 @@
 
         });
 
+        $("#demo-btn-addrow").click(function () {
+            $("#bs-example-modal-sm").modal('show');
+        });
+
+        $(".btn-close").click(function () {
+            // Swal.fire('1234567890')
+        });
 
 
     </script>
