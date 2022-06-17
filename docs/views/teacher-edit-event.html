@@ -40,6 +40,10 @@
     <!-- icons -->
     <link href="../assets/css/icons.min.css" rel="stylesheet" type="text/css" />
     <style>
+        .card-cell-color {
+            background-color: #e6f6f6;
+        }
+
         .card {
             border: unset;
         }
@@ -580,7 +584,7 @@
                         </div> <!-- end card -->
                     </div> <!-- end col -->
 
-                    <div class="row" id="studentList">
+                    <div class="row" id="studentCard">
                         <div class="col-12">
                             <div class="card">
                                 <div class="card-body">
@@ -590,13 +594,17 @@
                                     <div class="row">
 
                                         <div class="col-12">
-                                            <select name="country" class="multi-select" multiple=""
-                                                id="my_multi_select3">
-                                                <!-- <option value="AF" selected>chencatmail / 丁丁</option>
+
+                                            <div class="mb-2 row" id="studentList">
+
+                                            </div>
+                                            <!-- <select name="country" class="multi-select" multiple=""
+                                                id="my_multi_select3"> -->
+                                            <!-- <option value="AF" selected>chencatmail / 丁丁</option>
                                                 <option value="AL">Albania</option>
                                                 <option value="DZ">Algeria</option>
                                                 <option value="AS">American Samoa</option> -->
-                                            </select>
+                                            <!-- </select> -->
                                             <button type="submit" class="btn btn-primary mt-2">回覆預設</button>
                                             <button type="submit" class="btn btn-success mt-2">儲存</button>
                                         </div>
@@ -820,15 +828,36 @@
         let searchParams = new URLSearchParams(window.location.search)
 
         if (searchParams.has('id') == false) {
-            $("#studentList").hide()
+            $("#studentCard").hide()
         }
+        // studentList.forEach(function (obj) {
+            // $("#my_multi_select3").append(`<option value="${obj.value1}"${obj.selected == true ? 'selected' : ''}>${obj.value1}/${obj.value2}</option>`);
+        // });
+
+        // $("#my_multi_select3").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
+
+
+    </script>
+
+    <script>
+
         studentList.forEach(function (obj) {
-            $("#my_multi_select3").append(`<option value="${obj.value1}"${obj.selected == true ? 'selected' : ''}>${obj.value1}/${obj.value2}</option>`);
+            $("#studentList").append(`<div class="card card-cell${obj.selected == true ? ' card-cell-color' : ''}">
+                                <div class="card-body">
+                                    <h4 class="header-title mb-">${obj.value1}/${obj.value2}</h4>
+                                </div> 
+                            </div>`)
         });
 
-        $("#my_multi_select3").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
 
+        $(".card-cell").click(function () {
+            if ($(this).hasClass('card-cell-color') == true) {
+                $(this).removeClass('card-cell-color')
+            } else {
+                $(this).addClass('card-cell-color')
+            }
 
+        });
     </script>
 
     <script>
