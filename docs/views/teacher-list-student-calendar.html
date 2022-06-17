@@ -44,6 +44,10 @@
             overflow-x: auto;
         }
 
+        .card-cell-color {
+            background-color: #e6f6f6;
+        }
+
         /* body {
             background-color: black;
             color: #fff;
@@ -344,10 +348,12 @@
 
                                 <div class="mb-2 row">
 
-                                    <select name="country" class="multi-select" multiple="" id="my_multi_select3">
+                                    <label id="select-student" class="form-control" for="simpleinput">選擇學生</label>
 
-                                    </select>
-                                    <button type="submit" class="btn btn-primary mt-2">回覆預設</button>
+                                    <!-- <select name="country" class="multi-select" multiple="" id="my_multi_select3">
+
+                                    </select> -->
+                                    <!-- <button type="submit" class="btn btn-primary mt-2">回覆預設</button> -->
                                     <button type="submit" class="btn btn-success mt-2">儲存</button>
 
                                 </div>
@@ -383,9 +389,13 @@
                 </div>
                 <div class="modal-body" style="align-self: center;">
 
-                    <div class="col-12 mb-4">
+                    <!-- <div class="col-12 mb-4">
                         <select name="country" class="multi-select" multiple="" id="my_multi_select1">
                         </select>
+                    </div> -->
+
+                    <div class="mb-2 row" id="studentList">
+
                     </div>
 
 
@@ -546,11 +556,11 @@
 
     <script>
 
-        studentList.forEach(function (obj) {
-            $("#my_multi_select1").append(`<option value="${obj.value1}">${obj.value1}/${obj.value2}</option>`);
-        });
+        // studentList.forEach(function (obj) {
+        //     $("#my_multi_select1").append(`<option value="${obj.value1}">${obj.value1}/${obj.value2}</option>`);
+        // });
 
-        $("#my_multi_select1").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
+        // $("#my_multi_select1").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
 
 
 
@@ -561,6 +571,35 @@
         $("#my_multi_select3").multiSelect({ selectableHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", selectionHeader: "<input type='text' class='form-control search-input' autocomplete='off' placeholder='搜尋...'>", afterInit: function (e) { var t = this, a = t.$selectableUl.prev(), i = t.$selectionUl.prev(), l = "#" + t.$container.attr("id") + " .ms-elem-selectable:not(.ms-selected)", o = "#" + t.$container.attr("id") + " .ms-elem-selection.ms-selected"; t.qs1 = a.quicksearch(l).on("keydown", function (e) { if (40 === e.which) return t.$selectableUl.focus(), !1 }), t.qs2 = i.quicksearch(o).on("keydown", function (e) { if (40 == e.which) return t.$selectionUl.focus(), !1 }) }, afterSelect: function () { this.qs1.cache(), this.qs2.cache() }, afterDeselect: function () { this.qs1.cache(), this.qs2.cache() } })
 
 
+    </script>
+
+    <script>
+
+        studentList.forEach(function (obj) {
+            $("#studentList").append(`<div class="card card-cell">
+                            <div class="card-body">
+                                <h4 class="header-title mb-">${obj.value1}/${obj.value2}</h4>
+                            </div> 
+                        </div>`)
+        });
+
+        $(".add-new-student").click(function () {
+            $("#add-new-student").modal('show');
+        });
+
+        $("#select-student").click(function () {
+            $("#add-new-student").modal('show');
+        });
+
+
+        $(".card-cell").click(function () {
+            if ($(this).hasClass('card-cell-color') == true) {
+                $(this).removeClass('card-cell-color')
+            } else {
+                $(this).addClass('card-cell-color')
+            }
+
+        });
     </script>
 
 
