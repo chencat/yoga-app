@@ -73,16 +73,11 @@
     background-color: #e6f6f6;
 }
 
-/* table {
-    width: 100%;
-    display: block;
-    overflow-x: auto;
-    white-space: nowrap;
-} */
 
-.card {
-    border: unset;
-}
+
+/* .card { */
+/* border: unset; */
+/* } */
 
 .content-page {
     padding-right: unset;

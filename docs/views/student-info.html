@@ -266,12 +266,12 @@
                     <div class="row">
                         <div class="col-12">
                             <div class="card">
-                                <div class="card-body">
+                                <div class="card-body" id="card-history">
                                     <h4 class="header-title">上課記錄</h4>
                                     <p class="sub-header">
                                         學生上課記錄
                                     </p>
-
+                                    <!-- 
                                     <table id="basic-datatable" class="table dt-responsive nowrap w-100">
                                         <thead>
                                             <tr>
@@ -287,7 +287,7 @@
                                         <tbody id="tbody-basic-datatable">
 
                                         </tbody>
-                                    </table>
+                                    </table> -->
 
                                 </div> <!-- end card body-->
                             </div> <!-- end card -->
@@ -352,35 +352,78 @@
                     status = 'accepted'
                     color = 'btn-purple'
                 }
+                btn += `<button style="width:45%;" type="button" class="btn ${color} waves-effect waves-light mb-2 ${status}">${value6}</button>`;
 
-                btn += `<button type="button" class="btn ${color} waves-effect waves-light mb-2 ${status}">${value6}</button>`;
+                // btn += `<button type="button" class="btn ${color} waves-effect waves-light mb-2 ${status}">${value6}</button>`;
 
             });
 
-            $("#basic-datatable tbody").append(`<tr>
-                                                <td data-th="日期">${obj.value1}</td>
-                                                <td data-th="課程">${obj.value2}</td>
-                                                <td data-th="老師">${obj.value3}</td>
-                                                <td data-th="地點">${obj.value4}</td>
-                                                <td data-th="狀態">${obj.value5}</td>
-                                                <td data-th=""><div class="button-list" id="${obj.value1} ${obj.value2}">${btn}</div></td>
-                                            </tr>`)
+            $("#card-history").append(`<div class="card">
+                                                    <div class="card-body">
+                                                        <div class="mb-2">
+                                                            <label class="col-2">日期
+                                                            </label>
+                                                            <label>${obj.value1}
+                                                            </label>
+                                                        </div>
+
+                                                        <div class="mb-2">
+                                                            <label class="col-2">課程
+                                                            </label>
+                                                            <label>
+                                                                ${obj.value2}</label>
+                                                        </div>
+
+                                                        <div class="mb-2">
+                                                            <label class="col-2">老師
+                                                            </label>
+                                                            <label>
+                                                                ${obj.value3}</label>
+                                                        </div>
+
+                                                        <div class="mb-2">
+                                                            <label class="col-2">地點
+                                                            </label>
+                                                            <label>
+                                                                ${obj.value4}</label>
+                                                        </div>
+
+                                                        <div class="mb-2">
+                                                            <label class="col-2">狀態
+                                                            </label>
+                                                            <label>
+                                                                ${obj.value5}</label>
+                                                        </div>
+
+                                                        <div class="button-list text-center" id="${obj.value1} ${obj.value2}">${btn}</div>
+                                                    </div>
+                                                </div>`)
+
+
+            // $("#basic-datatable tbody").append(`<tr>
+            //                                     <td data-th="日期">${obj.value1}</td>
+            //                                     <td data-th="課程">${obj.value2}</td>
+            //                                     <td data-th="老師">${obj.value3}</td>
+            //                                     <td data-th="地點">${obj.value4}</td>
+            //                                     <td data-th="狀態">${obj.value5}</td>
+            //                                     <td data-th=""><div class="button-list" id="${obj.value1} ${obj.value2}">${btn}</div></td>
+            //                                 </tr>`)
         });
 
 
 
-        $("#basic-datatable").DataTable({
-            responsive: false,
-            language: {
-                paginate: {
-                    previous: "<i class='mdi mdi-chevron-left'>",
-                    next: "<i class='mdi mdi-chevron-right'>"
-                }
-            },
-            drawCallback: function () {
-                $(".dataTables_paginate > .pagination").addClass("pagination-rounded")
-            }
-        });
+        // $("#basic-datatable").DataTable({
+        //     responsive: false,
+        //     language: {
+        //         paginate: {
+        //             previous: "<i class='mdi mdi-chevron-left'>",
+        //             next: "<i class='mdi mdi-chevron-right'>"
+        //         }
+        //     },
+        //     drawCallback: function () {
+        //         $(".dataTables_paginate > .pagination").addClass("pagination-rounded")
+        //     }
+        // });
 
     </script>
 
