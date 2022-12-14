@@ -69,7 +69,7 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">課程列表</a>
+                        <a class="nav-link">課程行事曆</a>
                     </li>
 
                 </ul>
@@ -245,61 +245,21 @@
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body">
-                                    <h4 class="header-title">課程列表</h4>
-                                    <div class="row">
-                                        <div class="col-12">
-                                            <div class="p-2">
-                                                <form class="form-horizontal" role="form">
-                                                    <div class="mb-2 row">
-                                                        <label class="col-md-2 col-form-label"
-                                                            for="example-date">選擇上課日期</label>
-                                                        <div class="col-md-4">
-                                                            <input class="form-control" type="date" name="date"
-                                                                id="example-date">
-                                                        </div>
-                                                    </div>
 
-                                                    <div class="mb-2 row">
-                                                        <div class="col-lg-6">
-                                                            <div class="card card-body">
-                                                                <h5 class="card-title">課程名稱：基礎1 / Basic 1 實體課</h5>
-                                                                <h5 class="card-title">上課日期：2022/01/01(二)</h5>
-                                                                <h5 class="card-title">上課時間：下午2:15</h5>
-                                                                <h5 class="card-title">授課老師：Doris</h5>
-                                                                <h5 class="card-title">上課地點：璽璽藝術空間D Art Studio</h5>
-                                                                <p class="card-text text-center" style="color: orange;">
-                                                                    登記候補</p>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-primary waves-effect waves-light">登記</a>
-                                                            </div>
-                                                        </div>
-                                                        <div class="col-lg-6">
-                                                            <div class="card card-body">
-                                                                <h5 class="card-title">課程名稱：基礎1 / Basic 1 視訊課</h5>
-                                                                <h5 class="card-title">上課日期：2022/01/01(二)</h5>
-                                                                <h5 class="card-title">上課時間：晚上7:00</h5>
-                                                                <h5 class="card-title">授課老師：Doris</h5>
-                                                                <h5 class="card-title">&nbsp;</h5>
-                                                                <p class="card-text text-center">&nbsp;</p>
-                                                                <a href="javascript:void(0);"
-                                                                    class="btn btn-primary waves-effect waves-light">登記</a>
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </form>
-                                            </div>
-                                        </div>
 
-                                    </div>
-                                    <!-- end row -->
-                                </div>
-                            </div> <!-- end card -->
-                        </div><!-- end col -->
-                    </div>
+
+
+
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body" id="studentEventList">
+                                <h4 class="header-title mb-4">課程列表</h4>
+
+
+                            </div>
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
 
 
                 </div> <!-- container -->
@@ -331,36 +291,38 @@
 
     <script>
 
-        studentEventList.forEach(function (obj) {
-            if (obj.status == undefined || obj.status == '停課') {
+        studentEventCourseList.forEach(function (obj) {
 
-                let attend = obj.attend || false;
-                let reserve = obj.reserve || false;
+            let attend = obj.attend || false;
+            let reserve = obj.reserve || false;
 
-                var buttons = '';
+            var buttons = '';
 
-                obj.value14.forEach(function (value14) {
-                    var status = '';
-                    var type = '';
-                    if (value14 == '參加') {
-                        status = 'attend';
-                        type = 'btn-outline-primary';
-                    } else if (value14 == '不參加') {
-                        status = 'absent';
-                        type = 'btn-outline-success';
-                    } else if (value14 == '登記') {
-                        status = 'reserve';
-                        type = 'btn-outline-warning';
-                    } else if (value14 == '取消') {
-                        status = 'cancel';
-                        type = 'btn-outline-danger';
-                    }
-                    buttons += `<button type="button"
+            obj.value14.forEach(function (value14) {
+                var status = '';
+                var type = '';
+                if (value14 == '參加') {
+                    status = 'attend';
+                    type = 'btn-outline-primary';
+                } else if (value14 == '不參加') {
+                    status = 'absent';
+                    type = 'btn-outline-success';
+                } else if (value14 == '登記') {
+                    status = 'reserve';
+                    type = 'btn-outline-warning';
+                } else if (value14 == '取消') {
+                    status = 'cancel';
+                    type = 'btn-outline-danger';
+                } else if (value14 == '簽到') {
+                    status = 'checkin';
+                    type = 'btn-outline-info';
+                }
+                buttons += `<button type="button"
                         class="btn ${type} btn-rounded waves-effect waves-light ${status}">${value14}</button>`
-                })
+            })
 
 
-                $("#studentEventList").append(`<div class="card">
+            $("#studentEventList").append(`<div class="card">
     <div class="card-body">
         <div class="dropdown float-end">
             <a href="#" class="dropdown-toggle arrow-none card-drop"
@@ -382,7 +344,7 @@
     </div> 
 </div> `);
 
-            }
+
         });
 
         $(".attend").click(function () {
@@ -424,6 +386,17 @@
                 title: `${id} 是否取消?`,
                 showCancelButton: true,
                 confirmButtonText: '取消',
+                cancelButtonText: '離開',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+        $(".checkin").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `${id} 是否簽到?`,
+                showCancelButton: true,
+                confirmButtonText: '簽到',
                 cancelButtonText: '離開',
             }).then((result) => {
                 /* Read more about isConfirmed, isDenied below */
