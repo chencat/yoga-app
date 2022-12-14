@@ -15,16 +15,6 @@
     <!-- Sweet Alert-->
     <link href="../assets/libs/sweetalert2/sweetalert2.min.css" rel="stylesheet" type="text/css" />
 
-    <!-- third party css -->
-    <link href="../assets/libs/datatables.net-bs4/css/dataTables.bootstrap4.min.css" rel="stylesheet" type="text/css" />
-    <link href="../assets/libs/datatables.net-responsive-bs4/css/responsive.bootstrap4.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="../assets/libs/datatables.net-buttons-bs4/css/buttons.bootstrap4.min.css" rel="stylesheet"
-        type="text/css" />
-    <link href="../assets/libs/datatables.net-select-bs4/css//select.bootstrap4.min.css" rel="stylesheet"
-        type="text/css" />
-    <!-- third party css end -->
-
     <!-- App css -->
     <link href="../assets/css/default/bootstrap.min.css" rel="stylesheet" type="text/css" id="bs-default-stylesheet" />
     <link href="../assets/css/default/app.min.css" rel="stylesheet" type="text/css" id="app-default-stylesheet" />
@@ -79,10 +69,10 @@
                         </button>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link">首頁</a>
+                        <a class="nav-link">課程列表</a>
                     </li>
-                </ul>
 
+                </ul>
                 <div class="clearfix"></div>
             </div>
         </div>
@@ -101,22 +91,6 @@
                 <div id="sidebar-menu">
 
                     <ul id="side-menu">
-
-                        <li>
-                            <a href="index.html">
-                                <i class="ri-message-2-line"></i>
-                                <span> 首頁 </span>
-                            </a>
-                        </li>
-
-                        <li class="menu-title">訪客</li>
-
-                        <li>
-                            <a href="guest-list-event.html">
-                                <i class="ri-message-2-line"></i>
-                                <span> 課程列表 </span>
-                            </a>
-                        </li>
 
                         <li class="menu-title">學生</li>
 
@@ -138,14 +112,14 @@
                         <li>
                             <a href="student-list-announcement.html">
                                 <i class="ri-message-2-line"></i>
-                                <span> 課程公告 </span>
+                                <span> 公告列表 </span>
                             </a>
                         </li>
 
                         <li>
                             <a href="student-list-notification.html">
                                 <i class="ri-message-2-line"></i>
-                                <span> 個人通知 </span>
+                                <span> 通知列表 </span>
                             </a>
                         </li>
 
@@ -186,51 +160,28 @@
                         <li>
                             <a href="teacher-list-announcement.html">
                                 <i class="ri-message-2-line"></i>
-                                <span> 課程公告 </span>
+                                <span> 公告列表 </span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="teacher-list-user.html">
+                            <a href="teacher-list-student.html">
                                 <i class="ri-message-2-line"></i>
-                                <span> 使用者管理 </span>
+                                <span> 學生列表 </span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="teacher-list-checkin.html">
+                            <a href="teacher-edit-instruction.html">
                                 <i class="ri-message-2-line"></i>
-                                <span> 簽到管理 </span>
-                            </a>
-                        </li>
-
-                        <li class="menu-title">管理員</li>
-
-                        <li>
-                            <a href="admin-list-parameter.html">
-                                <i class="ri-message-2-line"></i>
-                                <span> 參數管理 </span>
+                                <span> 課程介紹 </span>
                             </a>
                         </li>
 
                         <li>
-                            <a href="admin-list-user.html">
+                            <a href="teacher-list-student-calendar.html">
                                 <i class="ri-message-2-line"></i>
-                                <span> 使用者管理 </span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="admin-list-report.html">
-                                <i class="ri-message-2-line"></i>
-                                <span> 報表管理</span>
-                            </a>
-                        </li>
-
-                        <li>
-                            <a href="admin-list-checkin.html">
-                                <i class="ri-message-2-line"></i>
-                                <span> 簽到管理</span>
+                                <span> 設定學生截止日期 </span>
                             </a>
                         </li>
 
@@ -252,22 +203,27 @@
         <!-- ============================================================== -->
 
         <div class="content-page">
-
             <div class="content">
 
                 <!-- Start Content-->
                 <div class="container-fluid">
 
-                    <div class="row">
-                        <div class="col-12">
-                            <div class="card">
-                                <div class="card-body" id="card-history">
-                                    <h4 class="header-title">您好，歡迎使用璽璽瑜珈 Line App</h4>
 
-                                </div> <!-- end card body-->
-                            </div> <!-- end card -->
-                        </div><!-- end col-->
-                    </div>
+
+
+
+
+
+                    <div class="col-12">
+                        <div class="card">
+                            <div class="card-body" id="studentEventList">
+                                <h4 class="header-title mb-4">課程列表</h4>
+
+
+                            </div>
+                        </div> <!-- end card -->
+                    </div> <!-- end col -->
+
 
                 </div> <!-- container -->
 
@@ -293,25 +249,121 @@
     <!-- Sweet Alerts js -->
     <script src="../assets/libs/sweetalert2/sweetalert2.min.js"></script>
 
-    <!-- third party js -->
-    <script src="../assets/libs/datatables.net/js/jquery.dataTables.min.js"></script>
-    <script src="../assets/libs/datatables.net-bs4/js/dataTables.bootstrap4.min.js"></script>
-    <script src="../assets/libs/datatables.net-responsive/js/dataTables.responsive.min.js"></script>
-    <script src="../assets/libs/datatables.net-responsive-bs4/js/responsive.bootstrap4.min.js"></script>
-    <script src="../assets/libs/datatables.net-buttons/js/dataTables.buttons.min.js"></script>
-    <script src="../assets/libs/datatables.net-buttons-bs4/js/buttons.bootstrap4.min.js"></script>
-    <script src="../assets/libs/datatables.net-buttons/js/buttons.html5.min.js"></script>
-    <script src="../assets/libs/datatables.net-buttons/js/buttons.flash.min.js"></script>
-    <script src="../assets/libs/datatables.net-buttons/js/buttons.print.min.js"></script>
-    <script src="../assets/libs/datatables.net-keytable/js/dataTables.keyTable.min.js"></script>
-    <script src="../assets/libs/datatables.net-select/js/dataTables.select.min.js"></script>
-    <script src="../assets/libs/pdfmake/build/pdfmake.min.js"></script>
-    <script src="../assets/libs/pdfmake/build/vfs_fonts.js"></script>
-
-
-
     <!-- App js -->
     <script src="../assets/js/app.min.js"></script>
+
+    <script>
+
+        studentEventList.forEach(function (obj) {
+            if (obj.status == undefined || obj.status == '停課') {
+
+                let attend = obj.attend || false;
+                let reserve = obj.reserve || false;
+
+                var buttons = '';
+
+                obj.value14.forEach(function (value14) {
+                    var status = '';
+                    var type = '';
+                    if (value14 == '參加') {
+                        status = 'attend';
+                        type = 'btn-outline-primary';
+                    } else if (value14 == '不參加') {
+                        status = 'absent';
+                        type = 'btn-outline-success';
+                    } else if (value14 == '登記') {
+                        status = 'reserve';
+                        type = 'btn-outline-warning';
+                    } else if (value14 == '取消') {
+                        status = 'cancel';
+                        type = 'btn-outline-danger';
+                    }
+                    buttons += `<button type="button"
+                        class="btn ${type} btn-rounded waves-effect waves-light ${status}">${value14}</button>`
+                })
+
+
+                $("#studentEventList").append(`<div class="card">
+    <div class="card-body">
+        <div class="dropdown float-end">
+            <a href="#" class="dropdown-toggle arrow-none card-drop"
+                data-bs-toggle="dropdown" aria-expanded="false">
+                <i class="mdi mdi-dots-vertical"></i>
+            </a>
+            <div class="dropdown-menu dropdown-menu-end" id="">
+                <a class="dropdown-item item1">課程介紹</a>
+                <a class="dropdown-item item2">注意事項</a>
+                <a class="dropdown-item item3">老師介紹</a>
+            </div>
+        </div>
+        <h4 class="header-title mb-0">${obj.value1}${attend == true ? '(已參加)' : ''}${reserve == true ? '(已登記)' : ''}</h4>
+        <h5 class="card-title mb-0">${obj.value2}</h5>
+        <h5 class="card-title mb-0">${obj.value3}</h5>
+    ${obj.value14.length == 0 ? '' : `<div class="button-list mt-4 text-center" id="${obj.value1} ${obj.value2}">
+                    ${buttons}
+                </div>`}
+    </div> 
+</div> `);
+
+            }
+        });
+
+        $(".attend").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `${id} 是否參加?`,
+                showCancelButton: true,
+                confirmButtonText: '參加',
+                cancelButtonText: '離開',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+        $(".absent").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `${id} 是否不參加?`,
+                showCancelButton: true,
+                confirmButtonText: '不參加',
+                cancelButtonText: '離開',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+        $(".reserve").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `${id} 是否登記?`,
+                showCancelButton: true,
+                confirmButtonText: '登記',
+                cancelButtonText: '離開',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+        $(".cancel").click(function () {
+            let id = $(this).parent().attr("id");
+            Swal.fire({
+                title: `${id} 是否取消?`,
+                showCancelButton: true,
+                confirmButtonText: '取消',
+                cancelButtonText: '離開',
+            }).then((result) => {
+                /* Read more about isConfirmed, isDenied below */
+            })
+        });
+
+        $(".item1").click(function () {
+            Swal.fire('課程介紹')
+        });
+        $(".item2").click(function () {
+            Swal.fire('注意事項')
+        });
+        $(".item3").click(function () {
+            Swal.fire('老師介紹')
+        });
+
+    </script>
 
 </body>
 
