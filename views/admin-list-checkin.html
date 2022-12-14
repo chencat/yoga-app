@@ -337,45 +337,43 @@
             $("#card-history").append(`<div class="card">
                                                     <div class="card-body">
                                                         <div class="mb-2">
-                                                            <label class="col-2">日期
+                                                            <label class="col-2">上課日期
                                                             </label>
                                                             <label>${obj.value1}
                                                             </label>
                                                         </div>
 
                                                         <div class="mb-2">
-                                                            <label class="col-2">課程
+                                                            <label class="col-2">上課時間
+                                                            </label>
+                                                            <label>
+                                                                ${obj.value7}</label>
+                                                        </div>
+
+                                                        <div class="mb-2">
+                                                            <label class="col-2">課程名稱
                                                             </label>
                                                             <label>
                                                                 ${obj.value2}</label>
                                                         </div>
 
                                                         <div class="mb-2">
-                                                            <label class="col-2">老師
+                                                            <label class="col-2">授課老師
                                                             </label>
                                                             <label>
                                                                 ${obj.value3}</label>
                                                         </div>
 
                                                         <div class="mb-2">
-                                                            <label class="col-2">學生
+                                                            <label class="col-2">學生名稱
                                                             </label>
                                                             <label>
-                                                                ${obj.value4}</label>
+                                                                ${obj.value4}(${obj.value5})</label>
                                                         </div>
-
-                                                        <div class="mb-2">
-                                                            <label class="col-2">暱稱
-                                                            </label>
-                                                            <label>
-                                                                ${obj.value5}</label>
-                                                        </div>
-
 
                                                         <div class="button-list text-center" id="${obj.value5} ${obj.value1} ${obj.value2}">${btn}</div>
                                                     </div>
                                                 </div>`)
-
 
         });
 

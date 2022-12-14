@@ -93,15 +93,15 @@ let courseHistoryList = [
 
 
 let adminCheckinList = [
-    { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Bella', value4: '珍妮', value5: '大Jeanie', value6: ['簽到', '取消'] }
-    , { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '珍妮', value5: '小Jeanie', value6: ['簽到', '取消'] }
-    , { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '愛達', value5: 'Ada', value6: ['簽到', '取消'] }
-    , { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '凱倫', value5: 'Karen', value6: ['簽到', '取消'] }];
+    { value1: '2022/01/01(一)', value7: '下午8:00', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Bella', value4: '珍妮', value5: '大Jeanie', value6: ['簽到', '取消'] }
+    , { value1: '2022/01/01(一)', value7: '下午8:00', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '珍妮', value5: '小Jeanie', value6: ['簽到', '取消'] }
+    , { value1: '2022/01/01(一)', value7: '下午8:00', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '愛達', value5: 'Ada', value6: ['簽到', '取消'] }
+    , { value1: '2022/01/01(一)', value7: '下午8:00', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '凱倫', value5: 'Karen', value6: ['簽到', '取消'] }];
 
 let teacherCheckinList = [
-    { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '珍妮', value5: '小Jeanie', value6: ['簽到', '取消'] }
-    , { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '愛達', value5: 'Ada', value6: ['簽到', '取消'] }
-    , { value1: '2022/01/01', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '凱倫', value5: 'Karen', value6: ['簽到', '取消'] }];
+    { value1: '2022/01/01(一)', value7: '下午8:00', value2: '基礎1 / Basic 1 實體課', value3: 'Doris', value4: '珍妮', value5: '小Jeanie', value6: ['簽到', '取消'] }
+    , { value1: '2022/01/01(一)', value7: '下午8:00', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '愛達', value5: 'Ada', value6: ['簽到', '取消'] }
+    , { value1: '2022/01/01(一)', value7: '下午8:00', value2: '週一下午8:00 基礎1 / Basic 1 實體課', value3: 'Doris', value4: '凱倫', value5: 'Karen', value6: ['簽到', '取消'] }];
 
 let reportList = [
     { value1: '2022/01/01', value2: ['下載'] }

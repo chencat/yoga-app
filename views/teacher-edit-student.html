@@ -285,20 +285,6 @@
                                         </a>
                                     </li>
 
-                                    <li class="nav-item">
-                                        <a href="#tab2" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
-                                            <!-- <span class="d-inline-block d-sm-none"><i class="mdi mdi-cog"></i></span> -->
-                                            <span class="d-inline-block d-sm-none">課堂數記錄</span>
-                                            <span class="d-none d-sm-inline-block">課堂數記錄</span>
-                                        </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#tab3" data-bs-toggle="tab" aria-expanded="false" class="nav-link">
-                                            <!-- <span class="d-inline-block d-sm-none"><i class="mdi mdi-cog"></i></span> -->
-                                            <span class="d-inline-block d-sm-none">上課記錄</span>
-                                            <span class="d-none d-sm-inline-block">上課記錄</span>
-                                        </a>
-                                    </li>
                                 </ul>
                                 <div class="tab-content">
 
@@ -313,7 +299,15 @@
                                                         ID</label>
                                                     <div class="col-md-10">
                                                         <input type="text" id="simpleinput" class="form-control"
-                                                            value="chencatmail">
+                                                            value="chencatmail" disabled>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label" for="simpleinput">姓名</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" id="simpleinput" class="form-control"
+                                                            value="">
                                                     </div>
                                                 </div>
 
@@ -326,162 +320,70 @@
                                                 </div>
 
                                                 <div class="mb-2 row">
-                                                    <label class="col-md-2 col-form-label"
-                                                        for="simpleinput">剩餘堂數</label>
+                                                    <label class="col-md-2 col-form-label" for="simpleinput">年紀</label>
                                                     <div class="col-md-10">
                                                         <input type="text" id="simpleinput" class="form-control"
-                                                            value="10" disabled>
+                                                            value="">
                                                     </div>
                                                 </div>
+
+
 
                                                 <div class="mb-2 row">
                                                     <label class="col-md-2 col-form-label"
-                                                        for="example-date">截止日期</label>
+                                                        for="example-textarea">個人身體狀況</label>
                                                     <div class="col-md-10">
-                                                        <input class="form-control" type="date" name="date"
-                                                            id="example-date" value="2022-12-31">
-                                                    </div>
-                                                </div>
-
-                                                <div class="mb-2 row">
-                                                    <label class="col-md-2 col-form-label">課程群組</label>
-                                                    <div class="col-md-10" id="edit-student-event">
-                                                        <label class="form-control">週一下午8:00 基礎1 / Basic 1 實體課、週二下午2:15
-                                                            基礎1 / Basic 1
-                                                            實體課</label>
-                                                    </div>
-                                                </div>
-
-                                                <!-- <div class="mb-2 row">
-                                                    <label class="col-md-2 col-form-label" for="example-time">課程群組</label>
-                                                    <div class="col-md-10">
-                                                        <select name="country" class="multi-select" multiple="" id="my_multi_select3">
-                
-                                                        </select>
-                                                    </div>
-                                                </div> -->
-
-                                                <div class="mb-2 row">
-                                                    <label class="col-md-2 col-form-label"
-                                                        for="textarea-info">基本資訊</label>
-                                                    <div class="col-md-10">
-                                                        <textarea class="form-control" id="textarea-info"
+                                                        <textarea class="form-control" id="example-textarea"
                                                             rows="5"></textarea>
                                                     </div>
                                                 </div>
 
-                                                <h6 style="color: red;">*購買堂數請用累加的方式計算，也就是每次新增都要比之前多</h6>
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="example-textarea">輔具使用狀況</label>
+                                                    <div class="col-md-10">
+                                                        <textarea class="form-control" id="example-textarea"
+                                                            rows="5"></textarea>
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="simpleinput">實體課剩餘堂數</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" id="simpleinput" class="form-control"
+                                                            value="10.5">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="simpleinput">視訊課剩餘堂數</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" id="simpleinput" class="form-control"
+                                                            value="0">
+                                                    </div>
+                                                </div>
+
+                                                <div class="mb-2 row">
+                                                    <label class="col-md-2 col-form-label"
+                                                        for="simpleinput">上課截止日期</label>
+                                                    <div class="col-md-10">
+                                                        <input type="text" id="simpleinput" class="form-control"
+                                                            value="2022/01/01">
+                                                    </div>
+                                                </div>
+
                                                 <h6 style="color: red;">*</h6>
                                                 <button type="submit" class="btn btn-primary" id="save">儲存</button>
-                                                <button type="submit" class="btn btn-info" id="save">恢復預設值</button>
+                                                <button type="submit" class="btn btn-info" id="save">暫停</button>
                                                 <button type="submit" class="btn btn-danger" id="suspend">停權</button>
                                             </div>
                                         </div>
 
                                     </div>
 
-                                    <div class="tab-pane" id="tab2">
-                                        <div class="card">
-                                            <div class="card-body">
-                                                <!-- <h4 class="header-title">課堂數記錄</h4>
-                                                <p class="sub-header">
-                                                    課堂數記錄
-                                                </p> -->
 
-                                                <div class="col-12">
-                                                    <a class="btn btn-success mb-2 add" style="width: 100%;">
-                                                        新增</a>
-                                                </div>
-
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div class="mb-2">
-                                                            <label class="col-3">新增日期
-                                                            </label>
-                                                            <label>2022/01/01
-                                                            </label>
-                                                        </div>
-
-                                                        <div class="mb-2">
-                                                            <label class="col-3">堂數
-                                                            </label>
-                                                            <label>
-                                                                20</label>
-                                                        </div>
-
-                                                        <div class="mb-2">
-                                                            <label class="col-3">剩餘堂數
-                                                            </label>
-                                                            <label>
-                                                                0</label>
-                                                        </div>
-
-                                                        <div class="mb-2">
-                                                            <label class="col-3">狀態
-                                                            </label>
-                                                            <label>
-                                                                已結束</label>
-                                                        </div>
-                                                    </div>
-                                                </div>
-
-                                                <div class="card">
-                                                    <div class="card-body">
-                                                        <div class="mb-2">
-                                                            <label class="col-3">新增日期
-                                                            </label>
-                                                            <label>2022/01/01
-                                                            </label>
-                                                        </div>
-
-                                                        <div class="mb-2">
-                                                            <label class="col-3">堂數
-                                                            </label>
-                                                            <label>
-                                                                20</label>
-                                                        </div>
-
-                                                        <div class="mb-2">
-                                                            <label class="col-3">剩餘堂數
-                                                            </label>
-                                                            <label>
-                                                                10</label>
-                                                        </div>
-
-                                                        <div class="mb-2">
-                                                            <label class="col-3">狀態
-                                                            </label>
-                                                            <label>
-                                                                使用中</label>
-                                                        </div>
-
-                                                        <div class="mb-2 text-center">
-                                                            <button class="btn btn-primary edit" style="width: 48%;">
-                                                                編輯</button>
-                                                            <button class="btn btn-danger delete" style="width: 48%;">
-                                                                刪除</button>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-
-                                    <div class="tab-pane" id="tab3">
-
-                                        <div class="card">
-                                            <div class="card-body" id="card-history">
-
-                                                <div class="col-12 mb-2">
-                                                    <button id="demo-btn-addrow" class="btn btn-success"
-                                                        style="width: 100%;">
-                                                        新增</button>
-                                                </div>
-
-                                            </div> <!-- end card body-->
-                                        </div> <!-- end card -->
-
-                                    </div>
                                 </div>
                             </div>
                         </div> <!-- end card -->
